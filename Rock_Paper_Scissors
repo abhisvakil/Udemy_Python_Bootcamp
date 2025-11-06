@@ -1,0 +1,53 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+import random
+print("What do you choose? Type 0 for rock, 1 for paper or 2 for Scissors.")
+user_response=input("Please enter your choice\n")
+
+if user_response == 0:
+    print(rock)
+elif user_response == 1:
+    print(paper)
+elif user_response == 2:
+    print(scissors)
+else:
+    print("Please select right option")
+#solution 1
+Possible_Outcomes=[rock, paper, scissors]
+computer_response=random.choice(Possible_Outcomes)
+print(f"Computer chose: {computer_response}")
+
+#Rules of game
+if user_response == rock and computer_response == scissors:
+    print("You Won!")
+elif user_response == scissors and computer_response == paper:
+    print("You Won!")
+elif user_response == paper and computer_response == rock:
+    print("You Won!")
+else:
+    print("You Lose, Better luck next time!")
+
